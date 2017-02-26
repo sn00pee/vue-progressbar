@@ -20,8 +20,9 @@ export default {
                 'background-color': this.progress.options.canSuccess ? this.progress.options.color : this.progress.options.failedColor,
                 'opacity': this.progress.options.show ? 1 : 0
             }
-            if (location == 'top' || location == 'bottom') {
+            if (location == 'top' || location == 'bottom' || location == 'middle') {
                 location === 'top' ? style.top = '0px' : style.bottom = '0px'
+                location === 'middle' ? style.top = '50%' : style.top = '0px'
                 if (!this.progress.options.inverse) {
                     style.left = '0px'
                 } else {

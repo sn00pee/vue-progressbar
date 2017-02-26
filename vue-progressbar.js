@@ -82,6 +82,7 @@ module.exports.install = function (Vue, options = {}) {
                 Vue.nextTick(() => {
                     setTimeout(() => {
                         this.$vm.RADON_LOADING_BAR.percent = 0
+                        this.$vm.$emit('finished')
                     }, 100)
                     if (this.$vm.RADON_LOADING_BAR.options.autoRevert) {
                         setTimeout(() => {
